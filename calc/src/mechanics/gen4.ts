@@ -279,6 +279,11 @@ export function calculateDPP(
     berryMod = 0.5;
     desc.defenderItem = defender.item;
   }
+  let dwcMod = 1;
+  if (typeEffectiveness === 4 && field.defenderSide.isDWC === true) {
+    dwcMod = 0.5;
+    desc.dwc = true;
+  }
 
   const damage: number[] = [];
   for (let i = 0; i < 16; i++) {
@@ -291,6 +296,7 @@ export function calculateDPP(
     damage[i] = Math.floor(damage[i] * metronomeMod);
     damage[i] = Math.floor(damage[i] * tintedMod);
     damage[i] = Math.floor(damage[i] * berryMod);
+    damage[i] = Math.floor(damage[i] * dwcMod);
     damage[i] = Math.max(1, damage[i]);
   }
   result.damage = damage;
@@ -336,6 +342,9 @@ export function calculateDPP(
         newFinalDamage = Math.floor(newFinalDamage * ebeltMod);
         newFinalDamage = Math.floor(newFinalDamage * metronomeMod);
         newFinalDamage = Math.floor(newFinalDamage * tintedMod);
+        if (move.timesUsed! === 1) {
+          newFinalDamage = Math.floor(newFinalDamage * dwcMod);
+        }
         newFinalDamage = Math.max(1, newFinalDamage);
         damageArray[i] = newFinalDamage;
       }
