@@ -230,6 +230,13 @@ const BW_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     nfe: true,
     abilities: {0: 'Big Pecks'},
   },
+  Zorua: {
+    types: ['Dark'],
+    bs: {hp: 40, at: 65, df: 40, sa: 80, sd: 40, sp: 65},
+    weightkg: 12.5,
+    nfe: true,
+    abilities: {0: 'Illusion'},
+  },
 };
 
 const BW: {[name: string]: SpeciesData} = extend(true, {}, DPP, BW_PATCH);
@@ -272,7 +279,15 @@ const SS_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 const SS: {[name: string]: SpeciesData} = extend(true, {}, SM, SS_PATCH);
 
 const PLA_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
-  
+  Zorua: {otherFormes: ['Zorua-Hisui']},
+  'Zorua-Hisui': {
+    types: ['Normal', 'Ghost'],
+    bs: {hp: 35, at: 60, df: 40, sa: 85, sd: 40, sp: 70},
+    weightkg: 12.5,
+    nfe: true,
+    abilities: {0: 'Illusion'},
+    baseSpecies: 'Zorua',
+  },
 };
 
 const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
