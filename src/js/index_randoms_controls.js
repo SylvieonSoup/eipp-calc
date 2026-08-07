@@ -204,8 +204,8 @@ $(".mode").change(function () {
 		window.location.replace('champions.html?' + params);
 	} else if (mode === 'one-vs-one') {
 		window.location.replace('index.html?' + params);
-	} else if (mode === 'eipp') {
-		window.location.replace('eipp.html?' + params);
+	} else if (mode === 'starmie') {
+		window.location.replace('starmie.html?' + params);
 	} else if (mode === "oms") {
 		window.location.replace('oms.html');
 	} else {
@@ -221,18 +221,18 @@ $(document).ready(function () {
 	var params = new URLSearchParams(window.location.search);
 	var m = params.get('mode');
 	if (m) {
-		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'eipp' && m !== 'oms') {
+		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'starmie' && m !== 'oms') {
 			window.location.replace('honkalculate' + linkExtension + '?' + params);
 		} else {
 			if ($('#randoms').prop('checked')) {
 				if (m === 'one-vs-one') {
 					window.location.replace('index' + linkExtension + '?' + params);
-				} else if (m === 'eipp') {
-					window.location.replace('eipp' + linkExtension + '?' + params);
+				} else if (m === 'starmie') {
+					window.location.replace('starmie' + linkExtension + '?' + params);
 				} else if (m === 'oms') {
 					window.location.replace('oms' + linkExtension + '?' + params);
 				}
-			} else if ($('#eipp').prop('checked')) {
+			} else if ($('#starmie').prop('checked')) {
 				if (m === 'one-vs-one') {
 					window.location.replace('index' + linkExtension + '?' + params);
 				} else if (m === 'oms') {
@@ -243,16 +243,16 @@ $(document).ready(function () {
 			} else if ($('#oms').prop('checked')) {
 				if (m === 'one-vs-one') {
 					window.location.replace('index' + linkExtension + '?' + params);
-				} else if (m === 'eipp') {
-					window.location.replace('eipp' + linkExtension + '?' + params);
+				} else if (m === 'starmie') {
+					window.location.replace('starmie' + linkExtension + '?' + params);
 				} else if (m === 'randoms') {
 					window.location.replace('randoms' + linkExtension + '?' + params);
 				}
 			} else {
 				if (m === 'randoms') {
 					window.location.replace('randoms' + linkExtension + '?' + params);
-				} else if (m === 'eipp') {
-					window.location.replace('eipp' + linkExtension + '?' + params);
+				} else if (m === 'starmie') {
+					window.location.replace('starmie' + linkExtension + '?' + params);
 				} else if (m === 'oms') {
 					window.location.replace('oms' + linkExtension + '?' + params);
 				}
