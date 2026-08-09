@@ -73,3 +73,4 @@ makeCachebuster('src/base.html', 'dist/index.html');
 makeCachebuster('src/randoms.html', 'dist/randoms.html');
 makeCachebuster('src/oms.html', 'dist/oms.html');
 makeCachebuster('src/starmie.html', 'dist/starmie.html');
+makeCachebuster('src/eifc.html', 'dist/eifc.html');

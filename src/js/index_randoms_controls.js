@@ -206,6 +206,8 @@ $(".mode").change(function () {
 		window.location.replace('index.html?' + params);
 	} else if (mode === 'starmie') {
 		window.location.replace('starmie.html?' + params);
+	} else if (mode === 'eifc') {
+		window.location.replace('eifc.html?' + params);
 	} else if (mode === "oms") {
 		window.location.replace('oms.html');
 	} else {
@@ -221,7 +223,7 @@ $(document).ready(function () {
 	var params = new URLSearchParams(window.location.search);
 	var m = params.get('mode');
 	if (m) {
-		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'starmie' && m !== 'oms') {
+		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'starmie' && m !== 'eifc' && m !== 'oms') {
 			window.location.replace('honkalculate' + linkExtension + '?' + params);
 		} else {
 			if ($('#randoms').prop('checked')) {
@@ -229,6 +231,8 @@ $(document).ready(function () {
 					window.location.replace('index' + linkExtension + '?' + params);
 				} else if (m === 'starmie') {
 					window.location.replace('starmie' + linkExtension + '?' + params);
+				} else if (m === 'eifc') {
+					window.location.replace('eifc' + linkExtension + '?' + params);
 				} else if (m === 'oms') {
 					window.location.replace('oms' + linkExtension + '?' + params);
 				}
@@ -237,6 +241,18 @@ $(document).ready(function () {
 					window.location.replace('index' + linkExtension + '?' + params);
 				} else if (m === 'oms') {
 					window.location.replace('oms' + linkExtension + '?' + params);
+				} else if (m === 'eifc') {
+					window.location.replace('eifc' + linkExtension + '?' + params);
+				} else if (m === 'randoms') {
+					window.location.replace('randoms' + linkExtension + '?' + params);
+				}
+			} else if ($('#eifc').prop('checked')) {
+				if (m === 'one-vs-one') {
+					window.location.replace('index' + linkExtension + '?' + params);
+				} else if (m === 'oms') {
+					window.location.replace('oms' + linkExtension + '?' + params);
+				} else if (m === 'starmie') {
+					window.location.replace('starmie' + linkExtension + '?' + params);
 				} else if (m === 'randoms') {
 					window.location.replace('randoms' + linkExtension + '?' + params);
 				}
@@ -245,6 +261,8 @@ $(document).ready(function () {
 					window.location.replace('index' + linkExtension + '?' + params);
 				} else if (m === 'starmie') {
 					window.location.replace('starmie' + linkExtension + '?' + params);
+				} else if (m === 'eifc') {
+					window.location.replace('eifc' + linkExtension + '?' + params);
 				} else if (m === 'randoms') {
 					window.location.replace('randoms' + linkExtension + '?' + params);
 				}
@@ -253,6 +271,8 @@ $(document).ready(function () {
 					window.location.replace('randoms' + linkExtension + '?' + params);
 				} else if (m === 'starmie') {
 					window.location.replace('starmie' + linkExtension + '?' + params);
+				} else if (m === 'eifc') {
+					window.location.replace('eifc' + linkExtension + '?' + params);
 				} else if (m === 'oms') {
 					window.location.replace('oms' + linkExtension + '?' + params);
 				}
