@@ -208,6 +208,10 @@ $(".mode").change(function () {
 		window.location.replace('eipp.html?' + params);
 	} else if (mode === "oms") {
 		window.location.replace('oms.html');
+	} else if (mode === "qipp") {
+		window.location.replace('qipp.html');
+	} else if (mode === "meweipp") {
+		window.location.replace('meweipp.html');
 	} else {
 		window.location.replace('honkalculate.html?' + params);
 	}
@@ -220,8 +224,9 @@ $(".notation").change(function () {
 $(document).ready(function () {
 	var params = new URLSearchParams(window.location.search);
 	var m = params.get('mode');
+
 	if (m) {
-		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'eipp' && m !== 'oms') {
+		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'eipp' && m !== 'oms' && m !== 'qipp' && m !== 'meweipp') {
 			window.location.replace('honkalculate' + linkExtension + '?' + params);
 		} else {
 			if ($('#randoms').prop('checked')) {
@@ -231,14 +236,22 @@ $(document).ready(function () {
 					window.location.replace('eipp' + linkExtension + '?' + params);
 				} else if (m === 'oms') {
 					window.location.replace('oms' + linkExtension + '?' + params);
+				} else if (m === 'qipp') {
+					window.location.replace('qipp' + linkExtension + '?' + params);
+				} else if (m === 'meweipp') {
+					window.location.replace('meweipp' + linkExtension + '?' + params);
 				}
 			} else if ($('#eipp').prop('checked')) {
 				if (m === 'one-vs-one') {
 					window.location.replace('index' + linkExtension + '?' + params);
-				} else if (m === 'oms') {
-					window.location.replace('oms' + linkExtension + '?' + params);
 				} else if (m === 'randoms') {
 					window.location.replace('randoms' + linkExtension + '?' + params);
+				} else if (m === 'oms') {
+					window.location.replace('oms' + linkExtension + '?' + params);
+				} else if (m === 'qipp') {
+					window.location.replace('qipp' + linkExtension + '?' + params);
+				} else if (m === 'meweipp') {
+					window.location.replace('meweipp' + linkExtension + '?' + params);
 				}
 			} else if ($('#oms').prop('checked')) {
 				if (m === 'one-vs-one') {
@@ -247,6 +260,34 @@ $(document).ready(function () {
 					window.location.replace('eipp' + linkExtension + '?' + params);
 				} else if (m === 'randoms') {
 					window.location.replace('randoms' + linkExtension + '?' + params);
+				} else if (m === 'qipp') {
+					window.location.replace('qipp' + linkExtension + '?' + params);
+				} else if (m === 'meweipp') {
+					window.location.replace('meweipp' + linkExtension + '?' + params);
+				}
+			} else if ($('#qipp').prop('checked')) {
+				if (m === 'one-vs-one') {
+					window.location.replace('index' + linkExtension + '?' + params);
+				} else if (m === 'eipp') {
+					window.location.replace('eipp' + linkExtension + '?' + params);
+				} else if (m === 'randoms') {
+					window.location.replace('randoms' + linkExtension + '?' + params);
+				} else if (m === 'oms') {
+					window.location.replace('oms' + linkExtension + '?' + params);
+				} else if (m === 'meweipp') {
+					window.location.replace('meweipp' + linkExtension + '?' + params);
+				}
+			} else if ($('#meweipp').prop('checked')) {
+				if (m === 'one-vs-one') {
+					window.location.replace('index' + linkExtension + '?' + params);
+				} else if (m === 'eipp') {
+					window.location.replace('eipp' + linkExtension + '?' + params);
+				} else if (m === 'randoms') {
+					window.location.replace('randoms' + linkExtension + '?' + params);
+				} else if (m === 'oms') {
+					window.location.replace('oms' + linkExtension + '?' + params);
+				} else if (m === 'qipp') {
+					window.location.replace('qipp' + linkExtension + '?' + params);
 				}
 			} else {
 				if (m === 'randoms') {
@@ -255,6 +296,10 @@ $(document).ready(function () {
 					window.location.replace('eipp' + linkExtension + '?' + params);
 				} else if (m === 'oms') {
 					window.location.replace('oms' + linkExtension + '?' + params);
+				} else if (m === 'qipp') {
+					window.location.replace('qipp' + linkExtension + '?' + params);
+				} else if (m === 'meweipp') {
+					window.location.replace('meweipp' + linkExtension + '?' + params);
 				}
 			}
 		}
