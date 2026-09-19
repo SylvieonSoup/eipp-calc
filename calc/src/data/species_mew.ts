@@ -108,7 +108,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
   Crabrawler: {
     types: ['Flying', 'Fire'],
-    bs: {hp: 82, at: 104, df: 115, sa: 105, sd: 108, sp: 59},
+    bs: {hp: 152, at: 201, df: 33, sa: 23, sd: 150, sp: 25},
     weightkg: 7,
     abilities: {0: 'Grim Neigh'},
   },
