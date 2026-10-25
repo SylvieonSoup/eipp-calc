@@ -206,6 +206,8 @@ $(".mode").change(function () {
 		window.location.replace('index.html?' + params);
 	} else if (mode === 'eipp') {
 		window.location.replace('eipp.html?' + params);
+	} else if (mode === 'eipp18') {
+		window.location.replace('eipp18.html?' + params);
 	} else if (mode === "oms") {
 		window.location.replace('oms.html');
 	} else {
@@ -221,7 +223,7 @@ $(document).ready(function () {
 	var params = new URLSearchParams(window.location.search);
 	var m = params.get('mode');
 	if (m) {
-		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'eipp' && m !== 'oms') {
+		if (m !== 'one-vs-one' && m !== 'randoms' && m !== 'eipp' && m !== 'oms' && m !== 'eipp18') {
 			window.location.replace('honkalculate' + linkExtension + '?' + params);
 		} else {
 			if ($('#randoms').prop('checked')) {
@@ -231,6 +233,18 @@ $(document).ready(function () {
 					window.location.replace('eipp' + linkExtension + '?' + params);
 				} else if (m === 'oms') {
 					window.location.replace('oms' + linkExtension + '?' + params);
+				} else if (m === 'eipp18') {
+					window.location.replace('eipp18' + linkExtension + '?' + params);
+				}
+			} else if ($('#eipp18').prop('checked')) {
+				if (m === 'one-vs-one') {
+					window.location.replace('index' + linkExtension + '?' + params);
+				} else if (m === 'oms') {
+					window.location.replace('oms' + linkExtension + '?' + params);
+				} else if (m === 'randoms') {
+					window.location.replace('randoms' + linkExtension + '?' + params);
+				} else if (m === 'eipp') {
+					window.location.replace('eipp' + linkExtension + '?' + params);
 				}
 			} else if ($('#eipp').prop('checked')) {
 				if (m === 'one-vs-one') {
@@ -239,6 +253,8 @@ $(document).ready(function () {
 					window.location.replace('oms' + linkExtension + '?' + params);
 				} else if (m === 'randoms') {
 					window.location.replace('randoms' + linkExtension + '?' + params);
+				} else if (m === 'eipp18') {
+					window.location.replace('eipp18' + linkExtension + '?' + params);
 				}
 			} else if ($('#oms').prop('checked')) {
 				if (m === 'one-vs-one') {
@@ -247,6 +263,8 @@ $(document).ready(function () {
 					window.location.replace('eipp' + linkExtension + '?' + params);
 				} else if (m === 'randoms') {
 					window.location.replace('randoms' + linkExtension + '?' + params);
+				} else if (m === 'eipp18') {
+					window.location.replace('eipp18' + linkExtension + '?' + params);
 				}
 			} else {
 				if (m === 'randoms') {
@@ -255,6 +273,8 @@ $(document).ready(function () {
 					window.location.replace('eipp' + linkExtension + '?' + params);
 				} else if (m === 'oms') {
 					window.location.replace('oms' + linkExtension + '?' + params);
+				} else if (m === 'eipp18') {
+					window.location.replace('eipp18' + linkExtension + '?' + params);
 				}
 			}
 		}
