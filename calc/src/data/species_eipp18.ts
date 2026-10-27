@@ -85,21 +85,21 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
   'Aegislash-Blade': {
     types: ['Normal', 'Ghost'],
-    bs: {hp: 100, at: 150, df: 50, sa: 150, sd: 50, sp: 60},
+    bs: {hp: 100, at: 140, df: 50, sa: 140, sd: 50, sp: 60},
     weightkg: 53,
     abilities: {0: 'Stance Change'},
     otherFormes: ['Aegislash-Shield', 'Aegislash-Both'],
   },
   'Aegislash-Shield': {
     types: ['Normal', 'Ghost'],
-    bs: {hp: 100, at: 50, df: 150, sa: 50, sd: 150, sp: 60},
+    bs: {hp: 100, at: 50, df: 140, sa: 50, sd: 140, sp: 60},
     weightkg: 53,
     abilities: {0: 'Stance Change'},
     baseSpecies: 'Aegislash-Blade',
   },
   'Aegislash-Both': {
     types: ['Normal', 'Ghost'],
-    bs: {hp: 100, at: 150, df: 150, sa: 150, sd: 150, sp: 60},
+    bs: {hp: 100, at: 140, df: 140, sa: 140, sd: 140, sp: 60},
     weightkg: 53,
     abilities: {0: 'Stance Change'},
     baseSpecies: 'Aegislash-Blade',
@@ -270,12 +270,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   Dunsparce: {
     types: ['Electric'],
     bs: {hp: 100, at: 100, df: 70, sa: 65, sd: 65, sp: 45},
+    nfe: true,
     weightkg: 14,
     abilities: {0: 'Serene Grace'},
   },
   Dusclops: {
     types: ['Ground'],
     bs: {hp: 100, at: 70, df: 130, sa: 60, sd: 130, sp: 25},
+    nfe: true,
     weightkg: 30.6,
     abilities: {0: 'Pressure'},
   },
@@ -837,6 +839,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   Ursaring: {
     types: ['Dark'],
     bs: {hp: 90, at: 130, df: 75, sa: 75, sd: 75, sp: 100},
+    nfe: true,
     weightkg: 125.8,
     abilities: {0: 'Guts'},
   },
