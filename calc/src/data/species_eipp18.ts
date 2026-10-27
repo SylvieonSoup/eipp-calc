@@ -800,7 +800,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   },
   'Sylveon W': {
     types: ['Fairy'],
-    bs: {hp: 95, at: 65, df: 100, sa: 110, sd: 130, sp: 60},
+    bs: {hp: 95, at: 65, df: 65, sa: 110, sd: 130, sp: 100},
     weightkg: 23.5,
     abilities: {0: 'Pixilate'},
   },
